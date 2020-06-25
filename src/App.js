@@ -2,26 +2,51 @@ import React from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Auxilary from './hoc/Auxilary/Auxilary';
+
+
+import Avatar from './containers/Avatar/Avatar';
+import Fire from './containers/Fire/Fire';
+import Air from './containers/Air/Air';
+import Water from './containers/Water/Water';
+import Earth from './containers/Earth/Earth';
 
 const app = props => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          writers <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const routes = ( 
+    <Switch>
+      <Route
+        path='/fire'
+        component={Fire}
+      />
+      <Route
+        path='/water'
+        component={Water}
+      />
+      <Route
+        path='/earth'
+        component={Earth}
+      />
+      <Route
+        path='/air'
+        component={Air}
+      />
+      <Route
+        path='/'
+        exact
+        component={Avatar}
+      />  
+      <Redirect 
+        to='/'
+      />
+    </Switch>
+  );
+
+
+  return (  
+    <Auxilary>
+      {routes}
+    </Auxilary>
   );
 }
 
-export default app;
+export default withRouter(app);
