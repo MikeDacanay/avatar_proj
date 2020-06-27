@@ -1,9 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
-import Auxilary from './hoc/Auxilary/Auxilary';
-
+import Layout from './hoc/Layout/Layout';
 
 import Avatar from './containers/Avatar/Avatar';
 import Fire from './containers/Fire/Fire';
@@ -11,7 +9,7 @@ import Air from './containers/Air/Air';
 import Water from './containers/Water/Water';
 import Earth from './containers/Earth/Earth';
 
-const app = props => {
+const App = props => {
   const routes = ( 
     <Switch>
       <Route
@@ -43,10 +41,12 @@ const app = props => {
 
 
   return (  
-    <Auxilary>
-      {routes}
-    </Auxilary>
+    <div>
+      <Layout>
+        {routes}
+      </Layout>
+    </div>         
   );
 }
 
-export default withRouter(app);
+export default withRouter(App);
