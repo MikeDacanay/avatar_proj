@@ -52,3 +52,7 @@ svg{
   width: 0;
   position: absolute;
 }
+
+html{
+  font-size: 125%;
+}

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
-import './App.css';
 import Layout from './hoc/Layout/Layout';
 
 import Avatar from './containers/Avatar/Avatar';
@@ -8,6 +7,8 @@ import Fire from './containers/Fire/Fire';
 import Air from './containers/Air/Air';
 import Water from './containers/Water/Water';
 import Earth from './containers/Earth/Earth';
+
+import classes from './app.module.css';
 
 const App = props => {
   const routes = ( 
@@ -41,7 +42,7 @@ const App = props => {
 
 
   return (  
-    <div>
+    <div className={classes.wrapper}>
       <Layout>
         {routes}
       </Layout>

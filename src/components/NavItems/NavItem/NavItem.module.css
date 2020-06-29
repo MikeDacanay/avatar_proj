@@ -1,0 +1,17 @@
+.navList {
+	list-style: none;
+	/*color: green;*/
+	/*padding: 0 0.50rem;*/	
+}
+
+.navList:first-of-type{
+	margin-right: auto;
+}
+
+.navList:not(:first-of-type){
+	margin-left: 1.5rem;
+}
+
+.navList a.active{
+	background: yellow;
+}
