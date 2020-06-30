@@ -11,9 +11,7 @@ const avatar = props => {
 			<Background>
 				<h1>THIS IS AVATAR</h1>
 				<p>These are your power, your destiny!</p>
-				// <DiagramItems>
-					
-				// </DiagramItems>	
+				<DiagramItems/>	
 			</Background>
 		</Auxilary>
 	);
