@@ -5,9 +5,8 @@ import Navbar from '../../components/Navbar/Navbar';
 
 const layout = props => {
 	return (
-		<Auxilary>
-			<Navbar								
-			/>
+		<Auxilary>	
+			<Navbar/>
 			<main>			
 				{props.children}
 			</main>
