@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Background from '../../hoc/Background/Background'
 import Auxilary from '../../hoc/Auxilary/Auxilary';
 
 import DiagramItems from '../../components/DiagramItems/DiagramItems';
 
-const avatar = props => {
+const avatar = props => {	
+	
+	
 	return (	 
 		<Auxilary>
 			<Background>

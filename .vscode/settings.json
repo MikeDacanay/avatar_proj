@@ -1,0 +1,8 @@
+{
+    "emmet.preferences": {
+    "bem.elementSeparator": "__"
+    },
+    "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+    }
+}
