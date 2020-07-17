@@ -4,17 +4,17 @@ import Power from '../../components/Power/Power';
 
 import Auxilary from '../../hoc/Auxilary/Auxilary';
 
+import * as actions from '../../store/actions/index';
+
 const air = props => {
-
-	console.log(props.airPowers);
-
+	//TODO create parent component Powers to hold all power
 	return (
 		<Auxilary>
 			<h1>THIS Is air</h1>
-			<Power>Power Air 1</Power>	
-			<Power>Power Air 2</Power>	
-			<Power>Power Air 3</Power>
-			<Power>Power Air 4</Power>	
+			<Power pwrAdded={props.onAirPwrAdded}>Power Air 1</Power>	
+			<Power pwrAdded={props.onAirPwrAdded}>Power Air 2</Power>	
+			<Power pwrAdded={props.onAirPwrAdded}>Power Air 3</Power>
+			<Power pwrAdded={props.onAirPwrAdded}>Power Air 4</Power>	
 		</Auxilary>
 	);
 };
@@ -25,4 +25,10 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps, null)(air);
+const mapStateToDispatch = dispatch => {
+	return {
+		onAirPwrAdded: powr => dispatch(actions.addAirPwr(powr)),
+	}
+}
+
+export default connect(mapStateToProps, mapStateToDispatch)(air);

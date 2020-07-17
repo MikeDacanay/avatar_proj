@@ -4,7 +4,9 @@ import classes from './Power.module.css';
 
 const power = props => {
     return (
-        <div className={classes.power}>
+        <div 
+            className={classes.power}
+            onClick={() => props.pwrAdded(props.children)}>
             {props.children}
         </div>  
     )
