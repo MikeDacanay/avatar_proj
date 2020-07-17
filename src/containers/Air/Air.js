@@ -1,20 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Power from '../../components/Power/Power';
+import Powers from '../../components/Powers/Powers';
 
 import Auxilary from '../../hoc/Auxilary/Auxilary';
 
 import * as actions from '../../store/actions/index';
 
 const air = props => {
-	//TODO create parent component Powers to hold all power
+	const powers = ['air1','air2','air3','air4'];
+
 	return (
 		<Auxilary>
 			<h1>THIS Is air</h1>
-			<Power pwrAdded={props.onAirPwrAdded}>Power Air 1</Power>	
+			<Powers
+				pwrs={powers}
+				pwrAdded={props.onAirPwrAdded}
+			/>
+{/* {			<Power pwrAdded={props.onAirPwrAdded}>Power Air 1</Power>	
 			<Power pwrAdded={props.onAirPwrAdded}>Power Air 2</Power>	
 			<Power pwrAdded={props.onAirPwrAdded}>Power Air 3</Power>
-			<Power pwrAdded={props.onAirPwrAdded}>Power Air 4</Power>	
+			<Power pwrAdded={props.onAirPwrAdded}>Power Air 4</Power>	 */}
 		</Auxilary>
 	);
 };

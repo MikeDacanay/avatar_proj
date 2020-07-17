@@ -7,14 +7,11 @@ const initialState = {
 
 const addAirPwer = (state, action) => {
     // TODO create utility function to share on all
-
+    
     
     if(!state.powers.includes(action.power)){
-        // console
-
         const addPower = [...state.powers];         
         addPower.push(action.power);
-
     
         return {
             ...state,

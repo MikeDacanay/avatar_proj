@@ -6,8 +6,8 @@ const power = props => {
     return (
         <div 
             className={classes.power}
-            onClick={() => props.pwrAdded(props.children)}>
-            {props.children}
+            onClick={() => props.powerAdded(props.power)}>            
+            {props.power}
         </div>  
     )
 }
