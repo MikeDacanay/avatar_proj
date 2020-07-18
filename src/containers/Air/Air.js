@@ -16,10 +16,6 @@ const air = props => {
 				pwrs={powers}
 				pwrAdded={props.onAirPwrAdded}
 			/>
-{/* {			<Power pwrAdded={props.onAirPwrAdded}>Power Air 1</Power>	
-			<Power pwrAdded={props.onAirPwrAdded}>Power Air 2</Power>	
-			<Power pwrAdded={props.onAirPwrAdded}>Power Air 3</Power>
-			<Power pwrAdded={props.onAirPwrAdded}>Power Air 4</Power>	 */}
 		</Auxilary>
 	);
 };

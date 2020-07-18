@@ -6,3 +6,10 @@ export const addAirPwr = pwr => {
         power: pwr,
     }
 }
+
+export const removeAirPwr = pwr => {
+    return {
+        type: actionTypes.REMOVE_AIRPWR,
+        power: pwr,
+    }
+}

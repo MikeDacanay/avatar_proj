@@ -1,2 +1,5 @@
 export const ADD_AIRPWR = 'ADD_AIRPWR';
 export const REMOVE_AIRPWR = 'REMOVE_AIRPWR';
+
+export const ADD_EARTHPWR = 'ADD_EARTHPWR';
+export const REMOVE_EARTHPWR = 'REMOVE_EARTHPWR';

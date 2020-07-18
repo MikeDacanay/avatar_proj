@@ -1,3 +1,4 @@
+import {updateObject} from '../../shared/utility';
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
@@ -5,23 +6,24 @@ const initialState = {
     totalAirPowers: 0,
 }
 
-const addAirPwer = (state, action) => {
-    // TODO create utility function to share on all
-    
-    
+// TODO create utility function to share on all
+
+const addAirPwer = (state, action) => {            
     if(!state.powers.includes(action.power)){
         const addPower = [...state.powers];         
         addPower.push(action.power);
     
-        return {
-            ...state,
+        return updateObject(state, {
             powers: addPower,
             totalAirPowers: state.totalAirPowers+1,
-        }
+        })
+  
     }else{
         return state;
     }
 }
+
+// TODO create removeAirPwer
 
 const reducer = (state = initialState, action) => {    
     switch(action.type){
