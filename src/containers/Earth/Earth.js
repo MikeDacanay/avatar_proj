@@ -6,27 +6,30 @@ import Auxilary from '../../hoc/Auxilary/Auxilary';
 
 import * as actions from '../../store/actions/index';
 
-//TODO create earth component
-//TODO connect action and reducer to mapState
-
 const earth = props => {
+	const powers = ['earth1','earth2','earth3','earth4']
+
 	return (
-		<h1>THIS IS EARTH</h1>
+		<Auxilary>
+			<h1>THIS IS EARTH</h1>
+			<Powers
+				pwrs={powers}
+				pwrAdded={props.onEarthPwrAdded}
+			/>				
+		</Auxilary>
 	);
 };
 
-// const mapStateToProps = state => {
-// 	return {
-// 		airPowers: state.air.powers,
-// 	}
-// }
+const mapStateToProps = state => {
+	return {
+		earthPowers: state.earth.powers,
+	}
+}
 
-// const mapStateToDispatch = dispatch => {
-// 	return {
-// 		onAirPwrAdded: powr => dispatch(actions.addAirPwr(powr)),
-// 	}
-// }
+const mapStateToDispatch = dispatch => {
+	return {
+		onEarthPwrAdded: powr => dispatch(actions.addEarthPwr(powr)),
+	}
+}
 
-
-
-export default earth;
+export default connect(mapStateToProps, mapStateToDispatch)(earth);

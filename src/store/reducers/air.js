@@ -6,9 +6,7 @@ const initialState = {
     totalAirPowers: 0,
 }
 
-// TODO create utility function to share on all
-
-const addAirPwer = (state, action) => {            
+const addAirPwer = (state, action) => { 
     if(!state.powers.includes(action.power)){
         const addPower = [...state.powers];         
         addPower.push(action.power);
@@ -22,8 +20,6 @@ const addAirPwer = (state, action) => {
         return state;
     }
 }
-
-// TODO create removeAirPwer
 
 const reducer = (state = initialState, action) => {    
     switch(action.type){

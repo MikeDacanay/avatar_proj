@@ -6,22 +6,28 @@ const initialState = {
     totalEarthPowers: 0,
 }
 
-//change powers below to addPower
-
 const addEarthPwr = (state, action) => {
-    return updateObject(state, {
-        powers: initialState.powers,
-        totalAirPowers: state.totalAirPowers+1,
-    })
+
+    if(!state.powers.includes(action.power)){
+        const addPower = [...state.powers];
+        addPower.push(action.power);
+
+        return updateObject(state, {
+            powers: addPower,
+            totalEarthPowers: state.totalEarthPowers+1,
+        })
+    }else{
+        return state;
+    }    
 }
 
 //TODO create removeEarthPwr
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {    
     switch(action.type){
-        case actionTypes.ADD_EARTHPWR: return addEarthPwr;
-        default: return state;    
-    }
+        case actionTypes.ADD_EARTHPWR: return addEarthPwr(state, action);
+        default: return state;
+    }    
 }
 
 export default reducer;
