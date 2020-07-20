@@ -4,4 +4,8 @@ export {
 
 export {
     addEarthPwr
-} from './earth'
+} from './earth';
+
+export {
+    addFirePwr
+} from './fire'
