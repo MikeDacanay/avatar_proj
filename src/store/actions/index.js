@@ -9,3 +9,7 @@ export {
 export {
     addFirePwr
 } from './fire'
+
+export {
+    addWaterPwr
+} from './water'

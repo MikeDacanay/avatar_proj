@@ -12,6 +12,7 @@ import App from './App';
 import airReducer from './store/reducers/air';
 import earthReducer from './store/reducers/earth';
 import fireReducer from './store/reducers/fire';
+import waterReducer from './store/reducers/water';
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
 	air: airReducer,
 	earth: earthReducer,
 	fire: fireReducer,
+	water: waterReducer,
 });
 
 const store = createStore(rootReducer, composeEnhancers());

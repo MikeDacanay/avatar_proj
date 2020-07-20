@@ -22,7 +22,7 @@ const fire = props => {
 
 const mapStateToProps = state => {
 	return {
-		firePowers: state.air.powers,
+		firePowers: state.fire.powers,
 	}
 }
 
