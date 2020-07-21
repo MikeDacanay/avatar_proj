@@ -14,7 +14,7 @@ const Power = props => {
     const togglePwr = () => {
         if(powerUp === props.power){
             setpowerUp(false);
-            //TODO create props.powerRemoved            
+            props.powerRemoved(props.power);          
         }else{
             setpowerUp(props.power);
             props.powerAdded(props.power);

@@ -16,6 +16,7 @@ const earth = props => {
 				pwrs={powers}
 				currentPwrs={props.earthPowers}
 				pwrAdded={props.onEarthPwrAdded}
+				pwrRemoved={props.onEarthPwrRemoved}
 			/>				
 		</Auxilary>
 	);
@@ -30,6 +31,7 @@ const mapStateToProps = state => {
 const mapStateToDispatch = dispatch => {
 	return {
 		onEarthPwrAdded: powr => dispatch(actions.addEarthPwr(powr)),
+		onEarthPwrRemoved: powr => dispatch(actions.removeEarthPwr(powr)),
 	}
 }
 

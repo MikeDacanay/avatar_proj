@@ -16,6 +16,7 @@ const air = props => {
 				pwrs={powers}
 				currentPwrs={props.airPowers}
 				pwrAdded={props.onAirPwrAdded}
+				pwrRemoved={props.onAirPwrRemoved}
 			/>
 		</Auxilary>
 	);
@@ -30,6 +31,7 @@ const mapStateToProps = state => {
 const mapStateToDispatch = dispatch => {
 	return {
 		onAirPwrAdded: powr => dispatch(actions.addAirPwr(powr)),
+		onAirPwrRemoved: powr => dispatch(actions.removeAirPwr(powr)),
 	}
 }
 

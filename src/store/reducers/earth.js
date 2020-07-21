@@ -21,13 +21,26 @@ const addEarthPwr = (state, action) => {
     }    
 }
 
-//TODO create removeEarthPwr
+const removeEarthPwr = (state, action ) => {
+    const index = state.powers.indexOf(action.power);
+
+    const tempPowers = [...state.powers];
+
+    tempPowers.splice(index,1);
+
+    return updateObject(state,{
+        powers: tempPowers,
+        totalEarthPowers: state.totalEarthPowers-1,
+    });
+}
 
 const reducer = (state = initialState, action) => {    
     switch(action.type){
         case actionTypes.ADD_EARTHPWR: return addEarthPwr(state, action);
+        case actionTypes.REMOVE_EARTHPWR: return removeEarthPwr(state, action);
         default: return state;
     }    
 }
+
 
 export default reducer;

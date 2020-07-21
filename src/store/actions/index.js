@@ -1,15 +1,19 @@
 export {
     addAirPwr,
+    removeAirPwr,
 } from './air';
 
 export {
-    addEarthPwr
+    addEarthPwr,
+    removeEarthPwr,
 } from './earth';
 
 export {
-    addFirePwr
+    addFirePwr,
+    removeFirePwr,
 } from './fire'
 
 export {
-    addWaterPwr
+    addWaterPwr,
+    removeWaterPwr,
 } from './water'

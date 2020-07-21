@@ -13,6 +13,7 @@ const powers = props => {
                 key = {i}
                 currentPowers = {props.currentPwrs}
                 powerAdded = {props.pwrAdded}
+                powerRemoved = {props.pwrRemoved}
             />
         ))
     ); 

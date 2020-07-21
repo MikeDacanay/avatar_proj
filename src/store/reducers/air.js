@@ -21,9 +21,23 @@ const addAirPwer = (state, action) => {
     }
 }
 
+const removeAirPwer = (state, action ) => {
+    const index = state.powers.indexOf(action.power);
+
+    const tempPowers = [...state.powers];
+
+    tempPowers.splice(index,1);
+
+    return updateObject(state,{
+        powers: tempPowers,
+        totalAirPowers: state.totalAirPowers-1,
+    });
+}
+
 const reducer = (state = initialState, action) => {    
     switch(action.type){
         case actionTypes.ADD_AIRPWR: return addAirPwer(state, action);
+        case actionTypes.REMOVE_AIRPWR: return removeAirPwer(state, action);
         default: return state;
     }    
 }
