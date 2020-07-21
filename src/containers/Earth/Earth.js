@@ -14,6 +14,7 @@ const earth = props => {
 			<h1>THIS IS EARTH</h1>
 			<Powers
 				pwrs={powers}
+				currentPwrs={props.earthPowers}
 				pwrAdded={props.onEarthPwrAdded}
 			/>				
 		</Auxilary>

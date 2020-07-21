@@ -6,13 +6,12 @@ import Auxilary from '../../hoc/Auxilary/Auxilary';
 
 const powers = props => {
 
-    console.log(props.pwrs);
-
     const numOfPwrs = (
         props.pwrs.map((pwr,i) => (
             <Power
                 power = {pwr}
                 key = {i}
+                currentPowers = {props.currentPwrs}
                 powerAdded = {props.pwrAdded}
             />
         ))

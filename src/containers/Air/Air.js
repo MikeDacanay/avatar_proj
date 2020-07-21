@@ -14,6 +14,7 @@ const air = props => {
 			<h1>THIS Is air</h1>
 			<Powers
 				pwrs={powers}
+				currentPwrs={props.airPowers}
 				pwrAdded={props.onAirPwrAdded}
 			/>
 		</Auxilary>

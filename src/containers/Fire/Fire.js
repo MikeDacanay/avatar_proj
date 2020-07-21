@@ -14,6 +14,7 @@ const fire = props => {
 			<h1>THIS IS FIRE</h1>
 			<Powers
 				pwrs={powers}
+				currentPwrs={props.firePowers}
 				pwrAdded={props.onFirePwrAdded}
 			/>
 		</Auxilary>

@@ -15,6 +15,7 @@ const water = props => {
 			<h1>THIS IS Water</h1>
 			<Powers
 				pwrs={powers}
+				currentPwrs={props.waterPowers}
 				pwrAdded={props.onWaterPwrAdded}
 			/>
 		</Auxilary>
