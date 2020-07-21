@@ -17,6 +17,7 @@ const water = props => {
 				pwrs={powers}
 				currentPwrs={props.waterPowers}
 				pwrAdded={props.onWaterPwrAdded}
+				pwrRemoved={props.onWaterPwrRemoved}
 			/>
 		</Auxilary>
 	);
@@ -31,6 +32,7 @@ const mapStateToProps = state => {
 const mapStateToDispatch = dispatch => {
 	return{
 		onWaterPwrAdded: powr => dispatch(actions.addWaterPwr(powr)),
+		onWaterPwrRemoved: powr => dispatch(actions.removeWaterPwr(powr)),
 	}
 }
 

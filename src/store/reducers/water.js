@@ -20,9 +20,24 @@ const addWaterPwer = (state, action) => {
     }   
 }
 
+const removeWaterPwer = (state, action ) => {
+    const index = state.powers.indexOf(action.power);
+
+    const tempPowers = [...state.powers];
+
+    tempPowers.splice(index,1);
+
+    return updateObject(state,{
+        powers: tempPowers,
+        totalWaterPowers: state.totalWaterPowers-1,
+    });
+}
+
+
 const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.ADD_WATERPWR: return addWaterPwer(state, action);
+        case actionTypes.REMOVE_WATERPWR: return removeWaterPwer(state, action);
         default: return state;
     }
 }

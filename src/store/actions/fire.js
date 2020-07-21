@@ -9,7 +9,7 @@ export const addFirePwr = pwr => {
 
 export const removeFirePwr = pwr => {
     return {
-        type: actionTypes.REMOVE_AIRPWR,
+        type: actionTypes.REMOVE_FIREPWR,
         power: pwr,
     }
 }

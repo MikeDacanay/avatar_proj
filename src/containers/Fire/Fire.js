@@ -16,6 +16,7 @@ const fire = props => {
 				pwrs={powers}
 				currentPwrs={props.firePowers}
 				pwrAdded={props.onFirePwrAdded}
+				pwrRemoved={props.onFirePwrRemoved}
 			/>
 		</Auxilary>
 	);
@@ -30,6 +31,7 @@ const mapStateToProps = state => {
 const mapStateToDispatch = dispatch => {
 	return {
 		onFirePwrAdded: powr => dispatch(actions.addFirePwr(powr)),
+		onFirePwrRemoved: powr => dispatch(actions.removeFirePwr(powr)),
 	}
 }
 

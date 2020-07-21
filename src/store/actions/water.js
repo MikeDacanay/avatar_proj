@@ -9,7 +9,7 @@ export const addWaterPwr = pwr => {
 
 export const removeWaterPwr = pwr => {
     return {
-        type: actionTypes.ADD_WATERPWR,
+        type: actionTypes.REMOVE_WATERPWR,
         power: pwr, 
     }
 }
